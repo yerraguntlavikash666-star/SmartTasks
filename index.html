@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Smart To-Do App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-list-check"></i> TaskFlow</h1>
+            <p>Smart Task Management Application</p>
+        </header>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="card">
+                <h2 id="totalTasks">0</h2>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="card">
+                <h2 id="activeTasks">0</h2>
+                <p>Active</p>
+            </div>
+
+            <div class="card">
+                <h2 id="completedTasks">0</h2>
+                <p>Completed</p>
+            </div>
+
+        </section>
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <h2>Add New Task</h2>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter task title">
+
+            <input
+                type="date"
+                id="dueDate">
+
+            <select id="priority">
+
+                <option value="Low">Low Priority</option>
+
+                <option value="Medium">Medium Priority</option>
+
+                <option value="High">High Priority</option>
+
+            </select>
+
+            <button id="addTaskBtn">
+                <i class="fas fa-plus"></i>
+                Add Task
+            </button>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+            type="text"
+            id="searchTask"
+            placeholder="Search Task...">
+
+        </section>
+
+        <!-- Filter -->
+
+        <section class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </section>
+
+        <!-- Task List -->
+
+        <section>
+
+            <h2>Your Tasks</h2>
+
+            <div id="taskList">
+
+                <!-- JavaScript creates tasks here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
